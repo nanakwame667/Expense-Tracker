@@ -9,3 +9,4 @@ clone the project
 
 ~run npm run dev
 
+Enjoy the project ~~~~~~~~~~~
