@@ -5,17 +5,20 @@ import IncomeExpenses from "./components/IncomeExpenses";
 import Transactionlist from "./components/Transactionlist";
 import AddTransaction from "./components/AddTransaction";
 import { GlobalProvider } from "./context/GlobalState";
+import { AuthProvider } from "./context/AuthContext";
 function App() {
   return (
-    <GlobalProvider>
-      <Header title={"Expense Tracker"} />
-      <div className="container">
-        <Balance />
-        <IncomeExpenses />
-        <Transactionlist />
-        <AddTransaction />
-      </div>
-    </GlobalProvider>
+    <AuthProvider>
+      <GlobalProvider>
+        <Header title={"Expense Tracker"} />
+        <div className="container">
+          <Balance />
+          <IncomeExpenses />
+          <Transactionlist />
+          <AddTransaction />
+        </div>
+      </GlobalProvider>
+    </AuthProvider>
   );
 }
 
